@@ -41,6 +41,8 @@ public class LearnDight {
         double realPrice = price * 8 / 10;
         System.out.println(realPrice);
 
+        int L5 = 0 , L6 = 0;
+
 
     }
 }

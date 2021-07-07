@@ -16,13 +16,13 @@ public class LearnDight {
 
         int father = 177;
         int mother = 165;
-        int son = (int) ((father + mother) * 1.08 / 2);
-        int daughter = (int) ((father * 0.923 + mother) / 2);
+        double son = (father + mother) * 1.08 / 2;
+        double daughter = (father * 0.923 + mother) / 2;
         System.out.println("儿子:" + son);
         System.out.println("女儿:" + daughter);
 
-        int rad = 21;
-        int nowr = rad * 2 + 3;
+        int red = 21;
+        int nowr = red * 2 + 3;
         int green = 24;
         int nowg = green * 2;
         System.out.println(nowr);

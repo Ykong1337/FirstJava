@@ -4,8 +4,10 @@ package com.ftg.learn.chapter02;
  * 数据类型
  *
  * @author YKONG
+ * @date
  */
-public class LearnDateType {
+
+public class LearnDataType {
     public static void main(String[] args) {
         byte byte1 = -128;
         byte byte2 = 127;
@@ -30,6 +32,9 @@ public class LearnDateType {
         char char4 = 65;
         boolean boolean1 = false;
         boolean boolean2 = true;
+        int _int = 3;
         System.out.println(float1);
+        System.out.println(100%3);
+        System.out.println(100%3.0);
     }
 }

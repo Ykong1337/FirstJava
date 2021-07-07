@@ -21,10 +21,10 @@ public class LearnDight {
         System.out.println("儿子:" + son);
         System.out.println("女儿:" + daughter);
 
-        int red = 21;
-        int nowr = red * 2 + 3;
-        int green = 24;
-        int nowg = green * 2;
+        double red = 21;
+        double nowr = red * 2 + 3;
+        double green = 24;
+        double nowg = green * 2;
         System.out.println(nowr);
         System.out.println(nowg);
 
@@ -39,8 +39,8 @@ public class LearnDight {
 
         System.out.println((a < b) ? c1 : c2 + " " + b);
 
-        short price = 100;
-        short realPrice = (short) (price * 8 / 10);
+        double price = 100;
+        double realPrice = price * 8 / 10;
         System.out.println(realPrice);
 
 

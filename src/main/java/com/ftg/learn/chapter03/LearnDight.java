@@ -1,7 +1,5 @@
 package com.ftg.learn.chapter03;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 public class LearnDight {
     public static void main(String[] args) {
 
@@ -42,7 +40,6 @@ public class LearnDight {
         double price = 100;
         double realPrice = price * 8 / 10;
         System.out.println(realPrice);
-
 
 
     }

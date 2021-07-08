@@ -2,48 +2,35 @@ package com.ftg.learn.chapter03;
 
 public class Solution {
 
-    public int divide(int dividend, int divisor) {
-        int y = 0;
-        int i = 0;
-        int j = 0;
+    public int strStr(String haystack, String needle) {
+        int okCount = -1;
 
-        if (dividend == 0){
-            y = 0;
-        }
-        if (dividend > 0 && divisor > 0){
-            while (dividend >= divisor){
-                dividend = dividend - divisor;
-                ++i;
-            }
-            y = i;
-        }else if (dividend < 0 && divisor < 0){
-            j = dividend;
-            while (dividend <= divisor){
-                dividend = dividend - divisor;
-                ++i;
-            }
-            if (j == -2147483648 && divisor == -1)
-                y = 2147483647;
-            else
-                y = i;
-        }else if (dividend > 0 && divisor < 0){
-            while (dividend >= (-divisor)){
-                dividend = dividend + divisor;
-                --i;
-            }
-            y = i;
-        }else {
-            while (dividend <= divisor){
-                dividend = dividend + divisor;
-                --i;
-            }
-            y = i+2;
-        }
-        return y;
-    }
+        if(haystack == "" && needle == "")
+            return 0;
 
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        System.out.println(s.divide(-2147483648,2));//2147483647
+        int haystackL = haystack.length();
+        int needleL = needle.length();
+        int count = haystackL - needleL + 1;
+
+        for(int i = 0;i<count;i++){
+            int hayIndex = i;
+            int lastIndex = 0;
+
+            for(int j = 0;j<needleL;j++){
+                if(haystack.charAt(hayIndex++) != needle.charAt(j)){
+                    break;
+                }else{
+                    lastIndex++;
+                }
+
+            }
+            if(lastIndex != needleL){
+                continue;
+            }else{
+                okCount = i;
+                break;
+            }
+        }
+        return okCount;
     }
 }

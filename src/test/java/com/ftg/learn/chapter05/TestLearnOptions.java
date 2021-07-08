@@ -1,5 +1,6 @@
 package com.ftg.learn.chapter05;
 
+import com.ftg.learn.chapter03.Solution;
 import org.junit.Test;
 
 public class TestLearnOptions {
@@ -13,4 +14,11 @@ public class TestLearnOptions {
         lo.testLogic3();
 
     }
+
+    @Test
+    public void test2(){
+        Solution s = new Solution();
+        System.out.println(s.strStr("loaa","lo"));
+    }
+
 }

@@ -17,7 +17,7 @@ public class Test {
     }
 
     public void person(double rmb){
-        double s = 0;
+        double s;
         if (rmb <= 1500){
             s = 0;
         }else if (rmb > 1500 && rmb <= 4500){

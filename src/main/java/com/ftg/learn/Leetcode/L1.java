@@ -13,11 +13,4 @@ public class L1 {
         }
         return two;
     }
-
-    public static void main(String[] args) {
-        int[] n = {2,7,11,15};
-        int[] x = new int[10];
-        L1 l = new L1();
-        x = l.twoSum(n,9);
-    }
 }

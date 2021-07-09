@@ -13,10 +13,4 @@ public class L9 {
         }
         return true;
     }
-
-    public static void main(String[] args) {
-        L9 l = new L9();
-        boolean x = l.isPalindrome(121);
-        System.out.println(x);
-    }
 }

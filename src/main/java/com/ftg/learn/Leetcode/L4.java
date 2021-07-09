@@ -39,12 +39,4 @@ public class L4 {
             n = (arr[c-1]+arr[c])/2;
         return n;
     }
-
-    public static void main(String[] args) {
-        int[] n1 = {1,3};
-        int[] n2 = {2};
-        L4 l = new L4();
-        double x = l.findMedianSortedArrays(n1,n2);
-        System.out.println(x);
-    }
 }

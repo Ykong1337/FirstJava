@@ -28,9 +28,4 @@ public class L763 {
         }
         return l;
     }
-
-    public static void main(String[] args) {
-        L763 l = new L763();
-        l.partitionLabels("ababcbacadefegdehijhklij");
-    }
 }

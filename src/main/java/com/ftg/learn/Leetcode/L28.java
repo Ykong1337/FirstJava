@@ -26,10 +26,4 @@ public class L28 {
     }
     return okCount;
     }
-
-    public static void main(String[] args) {
-        L28 l = new L28();
-        int x = l.strStr("hello","ll");
-        System.out.println(x);
-    }
 }

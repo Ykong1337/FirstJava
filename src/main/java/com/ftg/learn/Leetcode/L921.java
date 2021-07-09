@@ -16,10 +16,4 @@ public class L921 {
         }
         return n+m;
     }
-
-    public static void main(String[] args) {
-        L921 l = new L921();
-        int x = l.minAddToMakeValid("()))((");
-        System.out.println(x);
-    }
 }

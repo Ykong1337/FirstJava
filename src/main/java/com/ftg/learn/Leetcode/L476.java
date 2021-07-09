@@ -29,10 +29,4 @@ public class L476 {
         }
         return sum;
     }
-
-    public static void main(String[] args) {
-        L476 l = new L476();
-        int x = l.findComplement(5);
-        System.out.println(x);
-    }
 }

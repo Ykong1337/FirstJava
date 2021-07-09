@@ -18,10 +18,4 @@ public class L930 {
         }
         return value;
     }
-    public static void main(String[] args) {
-        L930 l = new L930();
-        int[] n = {1,0,1,0,1};
-        int x = l.numSubarraysWithSum(n,2);
-        System.out.println(x);
-    }
 }

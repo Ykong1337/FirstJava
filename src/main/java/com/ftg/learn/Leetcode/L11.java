@@ -19,11 +19,4 @@ public class L11 {
         }
         return S;
     }
-
-    public static void main(String[] args) {
-        L11 l = new L11();
-        int[] h = {1,2,1};
-        int x = l.maxArea(h);
-        System.out.println(x);
-    }
 }

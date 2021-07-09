@@ -7,10 +7,4 @@ public class L29 {
         else
             return dividend / divisor;
     }
-
-    public static void main(String[] args) {
-        L29 l = new L29();
-        int x = l.divide(10,7);
-        System.out.println(x);
-    }
 }

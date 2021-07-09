@@ -16,9 +16,4 @@ public class L1365 {
         }
         return temp;
     }
-
-    public static void main(String[] args) {
-        int[] x = {8,1,2,2,3};
-        x = L1365.smallerNumbersThanCurrent(x);
-    }
 }

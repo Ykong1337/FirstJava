@@ -29,10 +29,4 @@ public class L1009 {
         }
         return sum;
     }
-
-    public static void main(String[] args) {
-        L1009 l = new L1009();
-        int x = l.bitwiseComplement(5);
-        System.out.println(x);
-    }
 }

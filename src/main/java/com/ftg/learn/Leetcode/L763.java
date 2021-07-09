@@ -7,10 +7,10 @@ public class L763 {
     public List<Integer> partitionLabels(String S) {
         int i;
         int t = 0;
-        Integer n = 0;
+        int n;
         int m = 0;
         int length = S.length();
-        List<Integer> l = new ArrayList<Integer>();
+        List<Integer> l = new ArrayList<>();
         for (i = 0;i<length;i++) {
             for (int j = length - 1; j >= i; j--) {
                 if (S.charAt(j) == S.charAt(i))

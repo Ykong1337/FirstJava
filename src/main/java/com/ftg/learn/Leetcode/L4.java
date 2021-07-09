@@ -18,7 +18,7 @@ public class L4 {
     }
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        double n = 0;
+        double n;
         int length1 = nums1.length;
         int length2 = nums2.length;
         int length = length1 + length2;
@@ -27,8 +27,8 @@ public class L4 {
             arr[i] = nums1[i];
         }
         int k = length1;
-        for (int j = 0;j<length2;j++){
-            arr[k] = nums2[j];
+        for (int i : nums2) {
+            arr[k] = i;
             k++;
         }
         shellSort(arr);

@@ -8,7 +8,9 @@ public class TestLearn {
         new LearnFor().testFor();
     }
     @Test
-    public void T2(){
-        new LearnP().no2(3);
+    public void T3(){
+        int x = new LearnP().for2(10);
+        System.out.println(x);
     }
+
 }

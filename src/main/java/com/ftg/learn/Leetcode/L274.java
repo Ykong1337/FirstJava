@@ -57,10 +57,4 @@ public class L274 {
         }
         return 0;
     }
-    public static void main(String[] args) {
-        int[] c = {0,3};
-        L274 l = new L274();
-        int x = l.hIndex(c);
-        System.out.println(x);
-    }
 }

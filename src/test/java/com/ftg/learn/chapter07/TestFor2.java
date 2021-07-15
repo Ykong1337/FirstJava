@@ -11,7 +11,24 @@ public class TestFor2 {
 
     @Test
     public void Test2(){
-        Triangle t = new Triangle();
-        t.printT2();
+        For3 t = new For3();
+        t.For14();
+    }
+
+    @Test
+    public void Test3(){
+        For3 f = new For3();
+        int x = f.jumpFrog(102,3,1);
+        System.out.println(x);
+
+        f.Test11();
+    }
+
+
+    @Test
+    public void Test4(){
+        Test10 t = new Test10();
+        t.questLast();
+        System.out.println(Math.round(-11.5));
     }
 }

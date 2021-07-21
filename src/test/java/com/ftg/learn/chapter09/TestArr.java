@@ -7,6 +7,6 @@ public class TestArr {
     @Test
     public void T1(){
         LearnArr l = new LearnArr();
-        l.ArrP2();
+        l.ArrP6();
     }
 }

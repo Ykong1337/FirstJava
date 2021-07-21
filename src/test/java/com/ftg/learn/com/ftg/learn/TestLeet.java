@@ -1,13 +1,14 @@
 package com.ftg.learn.com.ftg.learn;
 
 import com.ftg.learn.Leetcode.L3;
+import com.ftg.learn.chapter09.ArrT;
 import org.junit.Test;
 
 public class TestLeet {
 
     @Test
     public void TestL(){
-        int x = new L3().lengthOfLongestSubstring("");
-        System.out.println(x);
+        ArrT t = new ArrT();
+        t.Arr1();
     }
 }

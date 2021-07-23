@@ -1,7 +1,5 @@
 package com.ftg.learn.chapter14.MtoM;
 
-import com.ftg.learn.chapter14.Student1;
-
 public class Midclass {
 
     private int mno;
@@ -10,7 +8,7 @@ public class Midclass {
 
     private Subject subject;
 
-    public Midclass(int mno, Student1 student, Subject subject) {
+    public Midclass(int mno, Student student, Subject subject) {
         this.mno = mno;
         this.student = student;
         this.subject = subject;

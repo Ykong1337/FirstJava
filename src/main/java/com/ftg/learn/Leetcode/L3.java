@@ -32,9 +32,4 @@ public class L3 {
         return max;
 
     }
-
-    public static void main(String[] args) {
-        int x = new L3().lengthOfLongestSubstring("pwwkew");
-        System.out.println(x);
-    }
 }

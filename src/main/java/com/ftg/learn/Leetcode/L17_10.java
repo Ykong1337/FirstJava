@@ -1,7 +1,9 @@
 package com.ftg.learn.Leetcode;
 
 public class L17_10 {
+
     public int majorityElement(int[] nums) {
+
         int len = nums.length;
         int[] copy = new int[len];
 

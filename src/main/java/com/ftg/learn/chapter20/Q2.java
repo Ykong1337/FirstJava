@@ -1,8 +1,5 @@
 package com.ftg.learn.chapter20;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.Scanner;
 
 public class Q2 {
 

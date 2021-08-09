@@ -14,7 +14,7 @@ public class Test {
         }
     }
 
-    @org.junit.jupiter.api.Test
+    @org.testng.annotations.Test
     public void test() {
         new Test().random();
     }

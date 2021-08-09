@@ -22,5 +22,6 @@ public class LinkTest {
 
         System.out.println();
         System.out.println(m.size());
+        System.out.println(m.linkRing());
     }
 }

@@ -1,6 +1,7 @@
 package com.ftg.learn.chapter19.Dong;
 
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 class MyException extends Exception{
     public String toString( ){	return "negative number "; }

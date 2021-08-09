@@ -1,6 +1,7 @@
 package com.ftg.learn.chapter19.q2;
 
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 public class Client {
 

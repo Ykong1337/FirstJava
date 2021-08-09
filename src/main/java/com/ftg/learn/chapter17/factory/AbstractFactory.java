@@ -4,7 +4,7 @@ import com.ftg.learn.chapter17.factory.color.Color;
 import com.ftg.learn.chapter17.factory.color.ColorEnum;
 import com.ftg.learn.chapter17.factory.shape.Shape;
 import com.ftg.learn.chapter17.factory.shape.ShapeEnum;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public abstract class AbstractFactory {
 

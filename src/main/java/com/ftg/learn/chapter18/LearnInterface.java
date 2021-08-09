@@ -1,6 +1,7 @@
 package com.ftg.learn.chapter18;
 
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 public class LearnInterface {
 

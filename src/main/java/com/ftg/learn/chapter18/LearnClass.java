@@ -1,6 +1,7 @@
 package com.ftg.learn.chapter18;
 
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;

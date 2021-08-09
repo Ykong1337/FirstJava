@@ -1,5 +1,7 @@
 package com.ftg.learn.chapter21.stack;
 
+import org.testng.annotations.Test;
+
 import java.util.Vector;
 
 public class IStack<E> implements MyStack<E> {
@@ -51,5 +53,17 @@ public class IStack<E> implements MyStack<E> {
     @Override
     public Object getPop() {
         return index == 0 ? null : this.obj.get(index - 1);
+    }
+
+
+    @Test
+    public void test(){
+        IStack<String> stack = new IStack();
+        stack.push("23345");
+        stack.push("aafefg");
+
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.getPop());
     }
 }

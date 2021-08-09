@@ -122,4 +122,20 @@ public class MyLinked {
         point = head;
         return true;
     }
+
+    public boolean linkRing(){
+        Node point1 = head;
+        Node point2 = head;
+
+        while (point1.next != null){
+            while (point2.next != null){
+                point2 = point2.next;
+                if (point1 == point2){
+                    return true;
+                }
+            }
+            point1 = point1.next;
+        }
+        return false;
+    }
 }

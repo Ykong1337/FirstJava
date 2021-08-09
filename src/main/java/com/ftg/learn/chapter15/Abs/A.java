@@ -1,7 +1,5 @@
 package com.ftg.learn.chapter15.Abs;
 
-import org.junit.jupiter.api.Test;
-
 /**
  * 父类 -》 开放的属性和方法 - 》子类
  * <p>

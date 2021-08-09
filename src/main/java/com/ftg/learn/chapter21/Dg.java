@@ -1,6 +1,6 @@
 package com.ftg.learn.chapter21;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.io.File;
 

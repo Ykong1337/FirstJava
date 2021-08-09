@@ -1,6 +1,5 @@
 package com.ftg.learn.Leetcode;
 
-import org.junit.jupiter.api.Test;
 
 public class L1400 {
 

@@ -1,7 +1,6 @@
 package com.ftg.learn.chapter15.Same;
 
 import com.ftg.learn.chapter15.Access.Human1;
-import org.junit.jupiter.api.Test;
 
 public class Son extends Human1{
 

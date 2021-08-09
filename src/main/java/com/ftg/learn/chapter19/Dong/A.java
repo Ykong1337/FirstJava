@@ -1,6 +1,7 @@
 package com.ftg.learn.chapter19.Dong;
 
-import org.junit.jupiter.api.Test;
+
+import org.testng.annotations.Test;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

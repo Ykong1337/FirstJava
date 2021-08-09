@@ -4,7 +4,7 @@ import com.ftg.learn.chapter17.ShapeType;
 import com.ftg.learn.chapter17.factory.AbstractFactory;
 import com.ftg.learn.chapter17.factory.color.Color;
 import com.ftg.learn.chapter17.factory.color.ColorEnum;
-import org.junit.jupiter.api.Test;
+
 
 public class ShapeFactory extends AbstractFactory {
 

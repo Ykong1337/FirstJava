@@ -1,6 +1,5 @@
 package com.ftg.learn.chapter15.Access;
 
-import org.junit.jupiter.api.Test;
 
 public class Same {
 

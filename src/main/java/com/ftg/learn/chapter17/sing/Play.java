@@ -1,6 +1,6 @@
 package com.ftg.learn.chapter17.sing;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class Play {
 

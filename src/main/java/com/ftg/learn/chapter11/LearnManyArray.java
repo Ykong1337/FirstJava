@@ -159,7 +159,6 @@ public class LearnManyArray {
         if (len == 1) {
             System.out.println(arr[0] + "出现了" + 1 + "次");
         }
-
         int count = 1;
         for (int i = 0; i < len - 1; i++) {
             if (arr[i] == arr[i + 1]) {

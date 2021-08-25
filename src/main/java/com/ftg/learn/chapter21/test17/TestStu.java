@@ -32,6 +32,7 @@ public class TestStu {
         }
         s1.setScore(95);
         System.out.println();
+
         System.out.println("不及格：");
         for (Student i : list) {
             if (i.getScore()<60){

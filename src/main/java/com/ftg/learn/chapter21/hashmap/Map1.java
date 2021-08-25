@@ -22,7 +22,7 @@ public class Map1 {
         return list;
     }
 
-    public List<Student> q23(Student... stu) {
+    public List<Student> q2(Student... stu) {
         //部分公司里希望再使用list里如果有明确的长度，声明Arraylist（长度）
         List<Student> list = new ArrayList<>(3);
         for (Student s : stu) {
@@ -50,7 +50,7 @@ public class Map1 {
     @Test
     public void test1() {
         Map1 map = new Map1();
-        System.out.println(map.q3(new Clazz("1234", "J207", "哈尔滨", q23(new Student("myh", 22, '男')))));
+        System.out.println(map.q3(new Clazz("1234", "J207", "哈尔滨", q2(new Student("myh", 22, '男')))));
     }
 
 

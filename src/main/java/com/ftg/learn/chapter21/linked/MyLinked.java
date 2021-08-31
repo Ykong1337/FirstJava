@@ -1,6 +1,14 @@
 package com.ftg.learn.chapter21.linked;
 
+import org.testng.annotations.Test;
+
 public class MyLinked {
+
+    private static MyLinked instance = new MyLinked();
+    private MyLinked (){}
+    public static MyLinked getInstance() {
+        return instance;
+    }
 
     class Node {
 
@@ -17,24 +25,6 @@ public class MyLinked {
     private Node last;
     private Node point;
 
-    /**
-     * 创建元素
-     *
-     * @param value
-     */
-    public MyLinked(int value) {
-        Node curr = new Node(value);
-        head.next = curr;
-        last = curr;
-    }
-
-    public MyLinked() {
-
-    }
-
-    /**
-     * 只有一个头结点
-     */
 
     public void add(int val) {
         Node curr = new Node(val);
@@ -57,20 +47,11 @@ public class MyLinked {
     public boolean haveNext() {
         return point == null ? false : true;
     }
-    /**
-     * 头结点的值
-     *
-     * @return
-     */
+
     public int getHead() {
         return this.head.value;
     }
 
-    /**
-     * 尾节点的值
-     *
-     * @return int
-     */
     public int getLast() {
         return this.last.value;
     }
@@ -127,15 +108,34 @@ public class MyLinked {
         Node point1 = head;
         Node point2 = head;
 
-        while (point1.next != null){
-            while (point2.next != null){
-                point2 = point2.next;
-                if (point1 == point2){
-                    return true;
-                }
-            }
+        while (point2 != null && point2.next != null){
+
             point1 = point1.next;
+            point2 = point2.next.next;
+
+            if (point1 == point2){
+                return true;
+            }
         }
         return false;
+    }
+
+
+    @Test
+    public void test(){
+        MyLinked.getInstance().add(0);
+        MyLinked.getInstance().add(1);
+        MyLinked.getInstance().add(2);
+        MyLinked.getInstance().add(3);
+
+        MyLinked.getInstance().insert(0,7);
+        MyLinked.getInstance().remove(4);
+
+        while (MyLinked.getInstance().haveNext()){
+            System.out.println(MyLinked.getInstance().next());
+        }
+
+        System.out.println("size = " + MyLinked.getInstance().size());
+        System.out.println("有环？" + MyLinked.getInstance().linkRing());
     }
 }

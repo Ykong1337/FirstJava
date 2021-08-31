@@ -2,6 +2,10 @@ package com.ftg.learn.chapter22.jdbc;
 
 import org.testng.annotations.Test;
 
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.sql.*;
 import java.util.*;
 
@@ -32,47 +36,46 @@ public class FirstJDBC {
         }
         return null;
     }
+    //-----------------------------------------------
 
-    public ResultSet query() {
+    public List<Emp> queryForPojo(String sql, Object... obj) {
+        List<Emp> list = new ArrayList<>();
+        try (
+                Connection conn = DriverManager.getConnection(url, username, password);
+                PreparedStatement stmt = conn.prepareStatement(sql)
+        ) {
+            //循环所有rs 把里面的行与列生成list<map>
+            if (obj != null) {
+                for (int i = 0, len = obj.length; i < len; i++) {
+                    stmt.setObject(i + 1, obj[i]);
+                }
+            }
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    ResultSetMetaData rsmd = rs.getMetaData();
+                    Emp e = new Emp();
+                    for (int i = 0, len = rsmd.getColumnCount(); i < len; i++) {
 
-        Connection con = this.myConnection();
+                        String columnName = rsmd.getColumnName(i + 1).toLowerCase();
+                        //PropertyDescriptor找到相应的属性对应的setter / getter
+                        PropertyDescriptor pd = new PropertyDescriptor(columnName, e.getClass());
+                        Method setmethod = pd.getWriteMethod();
 
-        Statement stmt = null;
+                        setmethod.invoke(e, rs.getObject(i + 1));
 
-        ResultSet rs = null;
-
-        try {
-            stmt = con.createStatement();
-            rs = stmt.executeQuery("select * from emp");
-
-            while (rs.next()) {
-                System.out.println(rs.getObject(1));
-                System.out.println(rs.getObject(2));
-                System.out.println(rs.getObject(3));
-                System.out.println("--------------");
+                    }
+                    list.add(e);
+                }
+            } catch (SQLException | IntrospectionException | IllegalAccessException | InvocationTargetException e) {
+                e.printStackTrace();
             }
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        } finally {
-            try {
-                if (con != null) {
-                    con.close();
-                }
-                if (stmt != null) {
-                    stmt.close();
-                }
-                if (rs != null) {
-                    rs.close();
-                }
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return rs;
+
+        return list;
     }
-
-
     //--------------------------------------------------------------------------------
 
     public List<Map<String, Object>> querylist(String sql, Object... obj) {
@@ -111,9 +114,10 @@ public class FirstJDBC {
     @Test
     public void test() throws SQLException {
         FirstJDBC j = new FirstJDBC();
-        j.querylist("select * from emp where sal < ?","3000").forEach(System.out::println);
+        List<Emp> l = j.queryForPojo("select eno,ename,job,mgr,date_format(hirdate,'%Y-%m-%d') hirdate,sal,comm,deptno from emp");
+
+        l.forEach(x -> System.out.println(x));
 
     }
-
 
 }

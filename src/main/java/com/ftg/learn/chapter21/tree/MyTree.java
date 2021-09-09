@@ -101,7 +101,7 @@ public class MyTree<E> {
         Integer i1 = (Integer) t1;
         Integer i2 = (Integer) node.val;
 
-        if (i1 == i2) {
+        if (i1.equals(i2)) {
             return true;
         }
         return i1 > i2 ? find(node.right, t1) : find(node.left, t1);

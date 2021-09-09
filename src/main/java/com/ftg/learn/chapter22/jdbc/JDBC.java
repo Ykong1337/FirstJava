@@ -3,6 +3,7 @@ package com.ftg.learn.chapter22.jdbc;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.testng.annotations.Test;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -48,7 +49,8 @@ public class JDBC {
         return list;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test(){
         JDBC j = new JDBC("root", "ykong", "jdbc:mysql://127.0.0.1:3306/db1");
         List l = j.queryForList("select e.ename,e.job,e.hirdate,d.dname\n" +
                 "from emp e left join dept d on e.deptno = d.deptno\n" +

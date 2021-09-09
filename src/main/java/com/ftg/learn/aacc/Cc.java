@@ -15,6 +15,7 @@ public class Cc {
             60L, TimeUnit.SECONDS,new SynchronousQueue<>()
     );
 
+
     @Test
     public void test1() throws InterruptedException{
         for (int i = 0;i < 10000;i++){

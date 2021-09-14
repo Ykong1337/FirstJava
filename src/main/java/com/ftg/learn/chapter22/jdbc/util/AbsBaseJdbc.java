@@ -1,7 +1,5 @@
 package com.ftg.learn.chapter22.jdbc.util;
 
-import com.ftg.learn.chapter22.C3P0Util;
-import com.ftg.learn.chapter22.jdbc.beans.Dept;
 import org.testng.annotations.Test;
 
 import java.beans.IntrospectionException;
@@ -9,10 +7,8 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.*;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public abstract class AbsBaseJdbc<T> implements IJdbc<T> {
 

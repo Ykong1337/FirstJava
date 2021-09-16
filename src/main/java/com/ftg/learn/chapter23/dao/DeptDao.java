@@ -42,6 +42,8 @@ public class DeptDao {
 
     IDept id = this.getSession().getMapper(IDept.class);
 
+
+//---------------------------------------------------------------------------------
     public List<Map<String, Object>> showaa() {
         return id.showAll();
     }
@@ -55,6 +57,8 @@ public class DeptDao {
         id.insertpro(deptno,dname,loc);
     }
 
+
+    //nomoral Insert
     public void insert(int deptno, String dname, String loc) {
         id.insert1(deptno, dname, loc);
     }
@@ -63,7 +67,11 @@ public class DeptDao {
         id.delete1(deptno);
     }
 
-    //test----------------------------------------------------
+
+
+
+
+    //test---------------------------------------------------------------------
 
     //Provider
     @Test

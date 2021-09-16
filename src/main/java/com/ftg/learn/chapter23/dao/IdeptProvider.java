@@ -1,9 +1,7 @@
 package com.ftg.learn.chapter23.dao;
 
-import com.ftg.learn.chapter23.entity.Dept;
 import org.apache.ibatis.jdbc.SQL;
 
-import java.util.Map;
 
 public class IdeptProvider {
     public String showByDyPara2(Integer deptno){

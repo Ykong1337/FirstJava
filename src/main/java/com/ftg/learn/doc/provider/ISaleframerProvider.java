@@ -1,5 +1,7 @@
-package com.ftg.learn.doc.dao;
+package com.ftg.learn.doc.provider;
 
+import com.ftg.learn.doc.entity.FrameEnum;
+import com.ftg.learn.doc.service.SelectService;
 import org.apache.ibatis.jdbc.SQL;
 
 public class ISaleframerProvider {
@@ -7,7 +9,7 @@ public class ISaleframerProvider {
     //只用来UPDATE
     public String updatePro(Integer id, String name, String address, String boss, FrameEnum type) {
 
-        SelInfoDao si = new SelInfoDao();
+        SelectService si = new SelectService();
 
         return new SQL() {
             {

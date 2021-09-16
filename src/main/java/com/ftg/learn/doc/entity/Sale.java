@@ -1,8 +1,6 @@
 package com.ftg.learn.doc.entity;
 
 
-import com.ftg.learn.doc.dao.TypeEnum;
-import com.ftg.learn.doc.dao.UnitEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

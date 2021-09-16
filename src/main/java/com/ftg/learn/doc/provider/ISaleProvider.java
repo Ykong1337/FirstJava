@@ -1,5 +1,8 @@
-package com.ftg.learn.doc.dao;
+package com.ftg.learn.doc.provider;
 
+import com.ftg.learn.doc.entity.TypeEnum;
+import com.ftg.learn.doc.entity.UnitEnum;
+import com.ftg.learn.doc.service.SelectService;
 import org.apache.ibatis.jdbc.SQL;
 
 public class ISaleProvider {
@@ -7,7 +10,7 @@ public class ISaleProvider {
     //只用来UPDATE
     public String updatePro(Integer id, String name, String address, Integer fid, UnitEnum unit, Double price, TypeEnum type, String scdate, String ccdate) {
 
-        SelInfoDao si = new SelInfoDao();
+        SelectService si = new SelectService();
 
         return new SQL() {
             {
@@ -48,5 +51,9 @@ public class ISaleProvider {
                 }
             }
         }.toString();
+    }
+
+    public String countSql(int pageNum){
+        return new SQL().SELECT("ceil(count(id)/"+pageNum+") page").FROM("sale").toString();
     }
 }

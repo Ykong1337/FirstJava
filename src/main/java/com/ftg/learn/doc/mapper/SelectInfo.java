@@ -1,4 +1,4 @@
-package com.ftg.learn.doc.dao;
+package com.ftg.learn.doc.mapper;
 
 import org.apache.ibatis.annotations.Select;
 
@@ -8,11 +8,11 @@ import java.util.Map;
 public interface SelectInfo {
 
     //统计“风起地”生产的全部商品信息，以及当前农场的产品价格排名
-    @Select("SELECT A.* FROM sale A,saleframer B WHERE B.name='风起地' ORDER BY A.price DESC")
+    @Select("SELECT A.*,rank() over(order by A.price) FROM sale A RIGHT JOIN saleframer B ON A.fid=B.id WHERE B.name='风起地'")
     List<Map<String, Object>> showRedStar();
 
     //统计“953西红柿”所有生产农场的信息，以及价格排名
-    @Select("SELECT B.* FROM sale A,saleframer B WHERE A.fid=B.id and A.name='953西红柿' ORDER BY A.price DESC")
+    @Select("SELECT B.*,rank() over(order by A.price) FROM sale A LEFT JOIN saleframer B ON A.fid=B.id WHERE A.name='953西红柿'")
     List<Map<String, Object>> show953();
 
     //列出所有农场的所有商品信息

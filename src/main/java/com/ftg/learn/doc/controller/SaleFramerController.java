@@ -10,19 +10,19 @@ public class SaleFramerController{
 
     FramerService framerService = new FramerService();
 
-    public String selectPage(int page, int pageNum){
+    public String selectFramer(int page, int pageNum){
         return JSON.toJSONString(framerService.selectLimit(page,pageNum));
     }
 
-    public String insertSale(Integer id,String name, String address, String boss, FrameEnum type){
+    public String insertFramer(Integer id,String name, String address, String boss, FrameEnum type){
         return JSON.toJSONString(framerService.insertFramer(id,name,address,boss,type));
     }
 
-    public String updateSale(Integer id, String name, String address, String boss, FrameEnum type){
+    public String updateFramer(Integer id, String name, String address, String boss, FrameEnum type){
         return JSON.toJSONString(framerService.updateFramer(id,name,address,boss,type));
     }
 
-    public String deleteSale(Integer id){
+    public String deleteFramer(Integer id){
         return JSON.toJSONString(framerService.deleteFramer(id));
     }
 
@@ -33,7 +33,8 @@ public class SaleFramerController{
     @Test
     public void t(){
         SaleFramerController s = new SaleFramerController();
-        s.insertSale(11,"aaaaaaaaaaaaaaaaaaaaaaa","ccc","yyy",FrameEnum.自营);
+//        s.insertSale(11,"aaaaaaaaaaaaaaaaaaaaaaa","ccc","yyy",FrameEnum.自营);
+        s.deleteFramer(10);
         SelectService d = new SelectService();
         d.showAll2().forEach(System.out::println);
     }

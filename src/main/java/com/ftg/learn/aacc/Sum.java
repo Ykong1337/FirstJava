@@ -2,6 +2,9 @@ package com.ftg.learn.aacc;
 
 import org.testng.annotations.Test;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Sum {
 
     public int sum(int n) {
@@ -12,8 +15,12 @@ public class Sum {
         }
     }
 
+
     @Test
     public void test() {
         System.out.println(new Sum().sum(100));
+        Queue<Integer> q = new LinkedList<>();
+
+
     }
 }

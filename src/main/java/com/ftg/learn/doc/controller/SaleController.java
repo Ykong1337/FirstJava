@@ -34,7 +34,9 @@ public class SaleController {
     @Test
     public void test(){
         SaleController s = new SaleController();
-        s.insertSale(23,"aaaaaaaaaaaaaaaaaaaa","aaa",1,UnitEnum.瓶,20.1,TypeEnum.水果,"2021-12-21","2022-11-11");
+//        s.insertSale(23,"aaaaaaaaaaaaaaaaaaaa","aaa",1,UnitEnum.瓶,20.1,TypeEnum.水果,"2021-12-21","2022-11-11");
+//        s.deleteSale(24);
+
         SelectService d = new SelectService();
         d.showAll().forEach(System.out::println);
     }

@@ -26,11 +26,11 @@ public interface SelectInfo {
     //--------------------------------Util----------------------------------
 
     //SELECT表全部 1
-    @Select("SELECT * FROM sale")
+    @Select("SELECT * FROM sale WHERE flag=1")
     List<Map<String, Object>> showAll();
 
     //SELECT表全部 2
-    @Select("SELECT * FROM saleframer")
+    @Select("SELECT * FROM saleframer WHERE flag=1")
     List<Map<String, Object>> showAll2();
 
     //返回农场的个数

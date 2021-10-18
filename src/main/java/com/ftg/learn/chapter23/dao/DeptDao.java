@@ -4,7 +4,6 @@ import com.ftg.learn.chapter23.entity.Dept;
 import com.ftg.learn.chapter23.entity.Emp;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.apache.ibatis.logging.slf4j.Slf4jImpl;
-import org.apache.ibatis.logging.stdout.StdOutImpl;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.*;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;

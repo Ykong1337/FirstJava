@@ -1,5 +1,6 @@
 package com.ftg.learn.thread;
 
+
 import lombok.SneakyThrows;
 import org.testng.annotations.Test;
 

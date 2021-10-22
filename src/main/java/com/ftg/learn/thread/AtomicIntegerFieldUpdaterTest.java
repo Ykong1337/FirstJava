@@ -1,5 +1,6 @@
 package com.ftg.learn.thread;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
